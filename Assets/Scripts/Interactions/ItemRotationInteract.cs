@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemRotationInteract : MonoBehaviour
 {
     [SerializeField] private float interactSensitivity = 10f;
+    [SerializeField] private Transform cameraTransform;
 
     private Vector3 rotation;
     private bool isRotating;
@@ -24,12 +25,16 @@ public class ItemRotationInteract : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        float xRot = Input.GetAxis("Mouse Y") * interactSensitivity;
-        float yRot = Input.GetAxis("Mouse X") * interactSensitivity;
-
-        Vector3 rot = transform.rotation.eulerAngles + new Vector3(-xRot, -yRot, 0f); //use local if your char is not always oriented Vector3.up
+        float xRot = -Input.GetAxis("Mouse Y") * interactSensitivity;
+        float yRot = -Input.GetAxis("Mouse X") * interactSensitivity;
         
-        transform.eulerAngles = rot;
+        Vector3 right = cameraTransform.right;
+        Vector3 up = cameraTransform.up;
+
+        Quaternion pitch = Quaternion.AngleAxis(-xRot, right);
+        Quaternion yaw = Quaternion.AngleAxis(yRot, up); 
+
+        transform.rotation = yaw * pitch * transform.rotation;
     }
     
     float ClampAngle(float angle, float from, float to)

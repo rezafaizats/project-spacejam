@@ -1166,6 +1166,7 @@ GameObject:
   - component: {fileID: 5544200987343953906}
   - component: {fileID: 9196827469174322797}
   - component: {fileID: 9196827469174322798}
+  - component: {fileID: 9196827469174322799}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -1361,6 +1362,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactSensitivity: 5
+  cameraTransform: {fileID: 963194228}
+--- !u!114 &9196827469174322799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647343758819257899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b53e06d0ff04854b0282edd7374e83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference: {fileID: 4641598257720961197}
+  materials:
+  - {fileID: 2100000, guid: 84c5fdf992981aa48ac0d1bca5e4f6bf, type: 2}
+  noiseScale: 2
+  displacementStrength: 0.6
+  objectScale: 1.02
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
