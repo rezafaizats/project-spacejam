@@ -411,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -495,6 +496,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &909443378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,9 +1188,11 @@ GameObject:
   - component: {fileID: 9196827469174322796}
   - component: {fileID: 4641598257720961197}
   - component: {fileID: 5544200987343953906}
-  - component: {fileID: 9196827469174322797}
   - component: {fileID: 9196827469174322798}
   - component: {fileID: 9196827469174322799}
+  - component: {fileID: 9196827469174322800}
+  - component: {fileID: 9196827469174322801}
+  - component: {fileID: 9196827469174322802}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -1306,6 +1332,7 @@ GameObject:
   - component: {fileID: 5353338652512208401}
   - component: {fileID: 7743745265536293718}
   - component: {fileID: 2860123827264178227}
+  - component: {fileID: 8301126341355141990}
   m_Layer: 0
   m_Name: OvalBrush
   m_TagString: Untagged
@@ -1313,6 +1340,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8301126341355141990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301126341355141989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15dd83c03e570e459eb6793d0e9cce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtyMaskBase: {fileID: 2800000, guid: 0d9d522fd257d5c4b8a8fe75ccde0560, type: 3}
+  brushTexture: {fileID: 2800000, guid: a0c975ae7d3ff6547ae986ec5dec4d35, type: 3}
+  objectMaterial: {fileID: 2100000, guid: d28764dc9ff9f4c48b59e8cdeeacebd1, type: 2}
 --- !u!4 &9196827469174322796
 Transform:
   m_ObjectHideFlags: 0
@@ -1322,33 +1364,12 @@ Transform:
   m_GameObject: {fileID: 6647343758819257899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.017, y: 1.06, z: -7.138}
+  m_LocalPosition: {x: 0.017, y: 0.64, z: -6.32}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &9196827469174322797
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647343758819257899}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9196827469174322798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,7 +1391,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6647343758819257899}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b53e06d0ff04854b0282edd7374e83c, type: 3}
   m_Name: 
@@ -1381,6 +1402,77 @@ MonoBehaviour:
   noiseScale: 2
   displacementStrength: 0.6
   objectScale: 1.02
+--- !u!114 &9196827469174322800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647343758819257899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0732cbc2c67e84d9f1bc602eee6f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: 0.017, y: 0.64, z: -6.32}
+  endPosition: {x: 0.017, y: 1.06, z: -7.138}
+  flipValueOnEnd: 1
+  playOnce: 1
+  onAnimationStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onAnimationEnd:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9196827469174322801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647343758819257899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f050751843414cb221231b5e75082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnItemClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9196827469174322800}
+        m_TargetAssemblyTypeName: ItemAnimation, Assembly-CSharp
+        m_MethodName: MoveItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &9196827469174322802
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647343758819257899}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2122681682525997855, guid: e1dd500d848aaf7498d3a4a4c74835a9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class ItemRotationInteract : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
 
     private Vector3 rotation;
-    private bool isRotating;
+    private bool isRotating = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +19,11 @@ public class ItemRotationInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButton(1)) RotateItem();
     }
 
 
-    private void OnMouseDrag()
+    private void RotateItem()
     {
         float xRot = -Input.GetAxis("Mouse Y") * interactSensitivity;
         float yRot = -Input.GetAxis("Mouse X") * interactSensitivity;
