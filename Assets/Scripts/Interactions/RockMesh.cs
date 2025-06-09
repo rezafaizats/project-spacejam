@@ -16,7 +16,7 @@ namespace Interactions
         private Vector3[] baseVertices;
         private Vector3[] baseNormals;
 
-        private void Start()
+        private void Update()
         {
             GenerateMesh();
         }
@@ -46,7 +46,7 @@ namespace Interactions
         private void GenerateObject()
         {
             var go = new GameObject("RockMesh");
-            go.transform.SetParent(transform, false);
+            go.transform.SetParent(reference.transform, false);
 
             obj = go.AddComponent<MeshFilter>();
             obj.mesh = Instantiate(reference.sharedMesh);
