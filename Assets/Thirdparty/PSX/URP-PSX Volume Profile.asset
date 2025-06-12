@@ -18,13 +18,13 @@ MonoBehaviour:
     m_Value: 0.2
   noiseWeight:
     m_OverrideState: 1
-    m_Value: 1.2
+    m_Value: 0.2
   screenBendX:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 7
   screenBendY:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 7
   vignetteAmount:
     m_OverrideState: 0
     m_Value: 0.98
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a1bd58dd7548198609eabd8ae2bb7d, type: 3}
   m_Name: Pixelation
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   widthPixelation:
     m_OverrideState: 1
     m_Value: 512
@@ -99,7 +99,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 256
   colorPrecision:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 16
 --- !u!114 &-758010384845797820
 MonoBehaviour:
@@ -158,31 +158,31 @@ MonoBehaviour:
   active: 1
   fogDensity:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 0
   fogDistance:
     m_OverrideState: 1
-    m_Value: 4.7
+    m_Value: 139
   fogColor:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 0}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   ambientColor:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 0}
+    m_Value: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
   fogNear:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 2.2
   fogFar:
     m_OverrideState: 0
-    m_Value: 81.3
+    m_Value: 51.1
   fogAltScale:
     m_OverrideState: 0
-    m_Value: 10
+    m_Value: 15.6
   fogThinning:
     m_OverrideState: 0
-    m_Value: 458
+    m_Value: 126
   noiseScale:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 113
   noiseStrength:
     m_OverrideState: 1
-    m_Value: 0.029
+    m_Value: 0

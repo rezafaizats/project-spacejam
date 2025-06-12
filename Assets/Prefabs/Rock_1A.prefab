@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4944233378595770559}
   - component: {fileID: 8133741206199166121}
+  - component: {fileID: 8287838686497339040}
   m_Layer: 0
   m_Name: Rock_1A
   m_TagString: Untagged
@@ -46,6 +47,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualRoot: {fileID: 5659325454623478736}
+  baseHealth: 1.5
+  minScale: 0.4
+--- !u!135 &8287838686497339040
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016058206314991522}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8455342146227756959
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,15 +28,20 @@ namespace Game_Mechanics
             foreach (var i in indexes)
             {
                 var randPrefab = rockPrefabs[Random.Range(0, rockPrefabs.Length)];
-                var rock = Instantiate(randPrefab);
-                rock.transform.position = GetPosition(verts[i], meshReference.transform.localScale);
-                rock.transform.forward = normals[i];
-                rock.transform.SetParent(rocksParent, false);
-                rock.transform.localScale = new Vector3(
+                var rockObj = Instantiate(randPrefab);
+                var rock = rockObj.GetComponent<Rock>();
+
+                rockObj.transform.position = GetPosition(verts[i], meshReference.transform.localScale);
+                rockObj.transform.forward = normals[i];
+                rockObj.transform.localScale = new Vector3(
                     Random.Range(scaleMin.x, scaleMax.x),
                     Random.Range(scaleMin.y, scaleMax.y),
                     Random.Range(scaleMin.z, scaleMax.z)
                 );
+                
+                rockObj.transform.SetParent(rocksParent, false);
+                
+                rock.Initialize();
             }
         }
 
