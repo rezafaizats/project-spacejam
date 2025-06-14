@@ -24,7 +24,7 @@ namespace Game_Mechanics
 
             if (tools.Count == 0) throw new Exception("No tool detected???");
 
-            tools.First().Value.SetIsEquipped(true);
+            //tools.First().Value.SetIsEquipped(true);
         }
 
         public void Equip(string toolId)

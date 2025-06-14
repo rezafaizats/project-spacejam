@@ -8,6 +8,7 @@ namespace Game_Mechanics
         private const string ID = "drill";
         
         [SerializeField] private float damageMultiplier = 1f;
+        [SerializeField] private GameObject drillObject;
 
         private bool isActive;
         private Camera cam;
@@ -16,6 +17,7 @@ namespace Game_Mechanics
         public void SetIsEquipped(bool isEquipped)
         {
             isActive = isEquipped;
+            drillObject.SetActive(!isEquipped);
         }
 
         private void Start()
