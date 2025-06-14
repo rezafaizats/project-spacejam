@@ -517,6 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageMultiplier: 1
   drillObject: {fileID: 792864740}
+  drillCursor: {fileID: 17914736}
 --- !u!1 &563441440
 GameObject:
   m_ObjectHideFlags: 0
